@@ -35,7 +35,10 @@ RUN git push -u origin main; exit 0
 # Add crontab file in the cron directory
 RUN mkdir /etc/cron.d/
 RUN cp -R /app/COVID19-Dataset-Downloader/crontab /etc/cron.d/repeatscript-cron
-# Give execution rights on the cron job
+# Give execution rights on the cron repeat script
+RUN chmod +x /app/COVID19-Dataset-Downloader/repeatscript.sh
+
+# Give execution rights for the cron tab
 RUN chmod 0644 /etc/cron.d/repeatscript-cron
 
 #install cron
