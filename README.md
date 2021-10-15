@@ -7,4 +7,4 @@ To run copy the dockerfile and execute the following commands:
 
 >docker build --build-arg USERNAME=<username> --build-arg PASSWORD=<password> --build-arg EMAIL=<email> -t covid-downloader .
   
->docker run -i -d covid-downloader-test
+>docker run -i -d covid-downloader
