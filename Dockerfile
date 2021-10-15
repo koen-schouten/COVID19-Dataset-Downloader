@@ -3,6 +3,9 @@
 FROM python:3.8-slim-buster
 WORKDIR /app
 
+ARG USERNAME
+ARG PASSWORD
+
 #INSTALL GIT
 RUN apt-get -y update
 RUN apt-get -y install git
