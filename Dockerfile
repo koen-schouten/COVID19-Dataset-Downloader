@@ -3,6 +3,7 @@
 FROM python:3.8-slim-buster
 WORKDIR /app
 
+ARG EMAIL
 ARG USERNAME
 ARG PASSWORD
 
@@ -19,6 +20,9 @@ RUN git clone https://github.com/${USERNAME}/COVID19-Dataset-Downloader.git
 RUN python ./COVID19-Dataset-Downloader/src/covid_data_downloader.py
 
 WORKDIR /app/COVID19-Dataset-Netherlands
+
+RUN  git config --global user.email ${EMAIL}
+RUN  git config --global user.name ${USERNAME}
 
 RUN git add .
 RUN git commit -m "scripted update"
