@@ -27,7 +27,7 @@ RUN  git config --global user.name ${USERNAME}
 RUN git add .
 RUN git commit -m "scripted update"
 RUN git remote set-url origin https://${USERNAME}:${PASSWORD}@github.com/${USERNAME}/COVID19-Dataset-Netherlands.git
-RUN git push -u origin main
+RUN git push -u origin main; exit 0
 
 
 #install crontab
