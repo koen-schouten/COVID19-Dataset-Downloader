@@ -1,0 +1,2 @@
+#Runs the script every day at 5 o'clock UTC
+0 17 * * * /app/COVID19-Dataset-Downloader/repeatscript.sh
