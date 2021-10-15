@@ -41,5 +41,7 @@ RUN chmod 0644 /etc/cron.d/repeatscript-cron
 #install cron
 RUN apt-get -y install cron
 
+#run crontab command to make sure the file is loaded in crontab
+RUN crontab /etc/cron.d/repeatscript-cron
 #run cron on container startup
 RUN cron
