@@ -25,7 +25,7 @@ FILE_NAME = "COVID-19_aantallen_gemeente_cumulatief.json"
 FILE2_NAME = "COVID-19_gedrag.json"
 
 # Location where the file should be saved
-FILE_DESTINATION_FOLDER = "data/"
+FILE_DESTINATION_FOLDER = "COVID19-Dataset-Netherlands/data/"
 
 # file name
 OUTPUT_FILE_NAME = "RVIG.json"

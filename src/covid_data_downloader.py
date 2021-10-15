@@ -5,7 +5,7 @@ import json
 BASE_URL = "https://data.rivm.nl/covid-19/"
 
 # Location where the file should be saved
-FILE_DESTINATION_FOLDER = "data/"
+FILE_DESTINATION_FOLDER = "COVID19-Dataset-Netherlands/data/"
 
 # The files and relevant keys we want to download
 files = [{"file_name": "COVID-19_aantallen_gemeente_per_dag.json", "keys": ["Date_of_publication", "Municipality_code", "Total_reported", "Hospital_admissions", "Deceased"]},
