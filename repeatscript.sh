@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd /app
 #run the python script
 python /app/COVID19-Dataset-Downloader/src/covid_data_downloader.py
 
