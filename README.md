@@ -1,4 +1,4 @@
-# COVID19-Dataset-Netherlands
+# COVID19 Dataset Downloader
 
 COVID19-Dataset-Downloader is used to daily download COVID data from the [RIVM COVID-19 dataset](https://data.rivm.nl/covid-19/).
 
