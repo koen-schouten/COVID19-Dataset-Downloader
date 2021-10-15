@@ -25,7 +25,7 @@ RUN  git config --global user.email ${EMAIL}
 RUN  git config --global user.name ${USERNAME}
 
 RUN git add .
-RUN git commit -m "scripted update"
+RUN git commit -m "scripted update"; exit 0
 RUN git remote set-url origin https://${USERNAME}:${PASSWORD}@github.com/${USERNAME}/COVID19-Dataset-Netherlands.git
 RUN git push -u origin main; exit 0
 
@@ -33,7 +33,8 @@ RUN git push -u origin main; exit 0
 #install crontab
 
 # Add crontab file in the cron directory
-RUN cp /app/COVID19-Dataset-Downloader/crontab /etc/cron.d/repeatscript-cron
+RUN mkdir /etc/cron.d/
+RUN cp -R /app/COVID19-Dataset-Downloader/crontab /etc/cron.d/repeatscript-cron
 # Give execution rights on the cron job
 RUN chmod 0644 /etc/cron.d/repeatscript-cron
 
@@ -41,4 +42,4 @@ RUN chmod 0644 /etc/cron.d/repeatscript-cron
 RUN apt-get -y install cron
 
 #run cron on container startup
-CMD cron
+RUN cron
