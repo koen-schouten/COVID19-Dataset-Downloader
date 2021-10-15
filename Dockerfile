@@ -23,3 +23,15 @@ RUN git remote set-url origin https://${USERNAME}:${PASSWORD}@github.com/${USERN
 RUN git push -u origin main
 
 
+#install crontab
+
+# Add crontab file in the cron directory
+RUN cp /app/COVID19-Dataset-Downloader/crontab /etc/cron.d/repeatscript-cron
+# Give execution rights on the cron job
+RUN chmod 0644 /etc/cron.d/repeatscript-cron
+
+#install cron
+RUN apt-get -y install cron
+
+#run cron on container startup
+CMD cron
