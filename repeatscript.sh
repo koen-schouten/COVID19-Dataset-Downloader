@@ -2,7 +2,7 @@
 
 cd /app
 #run the python script
-python /app/COVID19-Dataset-Downloader/src/covid_data_downloader.py
+/usr/local/bin/python /app/COVID19-Dataset-Downloader/src/covid_data_downloader.py
 
 #change to the dataset dir
 cd /app/COVID19-Dataset-Netherlands
