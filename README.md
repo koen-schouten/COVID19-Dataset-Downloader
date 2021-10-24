@@ -9,6 +9,8 @@ To run copy the dockerfile and execute the following commands:
   
 >docker run -i -d covid-downloader
 
-Note:
-Password is not hidden. Only run on a system that's completely controlled by yourself.
+# Note:
+
+**Password is not hidden**. Only run on a system that's completely controlled by yourself.
+
 To run this yourself make sure a github.com/{USERNAME}/COVID19-Dataset-Netherlands.git repo exists.
