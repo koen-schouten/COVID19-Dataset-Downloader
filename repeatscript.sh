@@ -1,5 +1,11 @@
 #!/bin/bash
 
+#change to the dataset dir
+cd /app/COVID19-Dataset-Netherlands
+
+#pull main from orgin
+git pull origin main
+
 cd /app
 #run the python script
 /usr/local/bin/python /app/COVID19-Dataset-Downloader/src/covid_data_downloader.py
